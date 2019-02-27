@@ -1,5 +1,9 @@
 # mysql in linux
 
+OS:ubuntu
+IDE:eclipse
+
+
 [Install Linux c api for mysql](https://dev.mysql.com/doc/refman/5.7/en/c-api-building-clients.html)
 
 https://blog.csdn.net/neo_2011/article/details/6805489
