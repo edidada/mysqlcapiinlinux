@@ -21,5 +21,13 @@ int main()
     //将所有用户信息读出，并输出。
     db.exeSQL("SELECT * from account;");
 
+    MyDB db2;
+    //连接数据库
+    db2.initDB("60.205.225.118","root","5Edidada","odb_test");
+    //将用户信息添加到数据库
+    db2.exeSQL("INSERT person(email,first,middle,last,age) values('abcd测试','Tom','Y','DDD',19);");
+//    db2.exeSQL("INSERT account values('ddd','456');");
+    //将所有用户信息读出，并输出。
+    db2.exeSQL("SELECT * from person;");
     return 0;
 }
