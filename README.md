@@ -14,3 +14,13 @@ https://blog.csdn.net/haluoluo211/article/details/54376947
 http://blog.51cto.com/eminzhang/1285705
 
 https://blog.csdn.net/rain_qingtian/article/details/16860945
+
+不能insert汉字 编码调整为utf8
+
+```shell
+
+show create table account;
+
+alter table account change name name varchar(250) character set uf8;
+
+```

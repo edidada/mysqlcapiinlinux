@@ -16,7 +16,7 @@ int main()
     //连接数据库
     db.initDB("60.205.225.118","root","5Edidada","mysql_c_test");
     //将用户信息添加到数据库
-    db.exeSQL("INSERT account values('abc','123');");
+    db.exeSQL("INSERT account values('abc测试','123');");
     db.exeSQL("INSERT account values('ddd','456');");
     //将所有用户信息读出，并输出。
     db.exeSQL("SELECT * from account;");
