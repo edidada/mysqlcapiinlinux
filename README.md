@@ -24,3 +24,5 @@ show create table account;
 alter table account change name name varchar(250) character set uf8;
 
 ```
+
+插入，删除数据库
