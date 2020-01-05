@@ -3,3 +3,6 @@
 /.settings/
 .cproject
 .project
+/.idea/
+*.iml
+/cmake-build-debug/
