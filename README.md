@@ -29,3 +29,6 @@ alter table account change name name varchar(250) character set uf8;
 
 
 [cmake 添加头文件目录，链接动态、静态库](https://www.cnblogs.com/binbinjx/p/5626916.html)
+
+
+mysql 

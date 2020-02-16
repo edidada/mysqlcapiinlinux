@@ -9,8 +9,16 @@ compiler:
 os:
   - linux
   - osx
+services:
+  - mysql
 install:
+  - sudo apt-get install libmysqlclient-dev -y
+  - export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/mysql
+  - sudo ldconfig
 before_script:
+  - sudo mysql -e 'CREATE DATABASE mysql_c_test;'
+  - sudo mysql -e 'CREATE DATABASE odb_test;'
+#  - mysql --user=travis --database=odb_test < person.sql
   - ls
   - pwd
 addons:
@@ -26,3 +34,4 @@ script:
   - cmake ..
   - make VERSEBOSE=1
   - ls
+  - ./mysqlcapiinlinux
