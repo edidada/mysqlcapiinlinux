@@ -2,26 +2,13 @@ language: cpp
 sudo: required
 dist: xenial
 
-# matrix:
-#     include:
-#     - os: linux
-#       compiler: gcc
-#       env: GCC_VERSION=7
-#         - CC=gcc-7
-#         - CXX=g++-7
-#       addons:
-#         apt:
-#           sources: ['ubuntu-toolchain-r-test']
-#           packages: ['g++-7']
-
-
 # osx_image: xcode11.3
 compiler:
   - gcc
-#   - clang
+  - clang
 os:
   - linux
-#     - osx
+  - osx
 install:
 before_script:
   - ls
@@ -37,8 +24,5 @@ script:
   - mkdir build
   - cd build
   - cmake ..
-  # once CMake has done its job we just build using make as usual
   - make VERSEBOSE=1
   - ls
-  # if the project uses ctest we can run the tests like this
-  # - make test
