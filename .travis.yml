@@ -5,10 +5,10 @@ dist: xenial
 # osx_image: xcode11.3
 compiler:
   - gcc
-  - clang
+#  - clang
 os:
   - linux
-  - osx
+#  - osx
 services:
   - mysql
 install:
