@@ -32,3 +32,10 @@ alter table account change name name varchar(250) character set uf8;
 
 
 mysql 
+
+
+## centos
+yum search mysql-devel
+sudo yum install mysql-devel -y
+
+repoquery -ql mysql-devel
