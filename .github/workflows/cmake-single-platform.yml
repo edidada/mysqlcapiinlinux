@@ -28,6 +28,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y libmysqlclient-dev
+        dpkg --listfiles libmysqlclient-dev
         cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build
