@@ -39,3 +39,5 @@ yum search mysql-devel
 sudo yum install mysql-devel -y
 
 repoquery -ql mysql-devel
+
+libmysqlclient-dev
