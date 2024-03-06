@@ -62,8 +62,10 @@ bool MyDB::exeSQL(string sql)
             {
                 //获取下一行数据
                 row=mysql_fetch_row(result);
-                if(row<0) break;
-
+                if (row == nullptr || row[0] != nullptr && atoi(row[0]) < 0) {
+                  // 处理负值
+                  break;
+                }
                 for(int j=0;j<num_fields;j++)  //输出每一字段
                 {
                     cout<<row[j]<<"\t\t";
